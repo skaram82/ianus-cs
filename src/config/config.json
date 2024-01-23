@@ -18,11 +18,11 @@
   },
 
   "call_to_action": {
-    "title": "Helping teams in the world with focus",
-    "description": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
+    "title": "Participate",
+    "description": "Be part of IANUS case study. Take a tour on a set of surveys to explore trust in AI!",
     "button": {
-      "label": "Download The Theme",
-      "link": "https://themefisher.com/astro-themes/pinwheel-astro"
+      "label": "Participate Now",
+      "link": "/survey"
     }
   },
 

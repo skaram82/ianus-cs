@@ -400,6 +400,10 @@ select:invalid {
   li > a {
     @apply text-sm hover:text-primary hover:underline;
   }
+
+  img {
+    display: inline;
+  }
 }
 
 //gradient-number

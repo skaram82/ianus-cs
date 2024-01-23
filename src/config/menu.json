@@ -22,6 +22,14 @@
     {
       "name": "Contact",
       "url": "/contact"
+    },
+    {
+      "name": "IANUS",
+      "url": "https://trustinscience.eu/"
+    },
+    {
+      "name": "AUTH CSHub",
+      "url": "https://cshub.auth.gr/"
     }
   ]
 }

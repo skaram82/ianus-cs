@@ -1,0 +1,47 @@
+{
+  "site": {
+    "title": "IANUS Case Studies",
+    "base_url": "http://localhost:3000/",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo_ianus.png",
+    "logo_width": "60",
+    "logo_height": "60",
+    "logo_text": "IANUS"
+  },
+
+  "settings": {
+    "pagination": 6,
+    "summary_length": 100,
+    "blog_folder": "blog"
+  },
+
+  "call_to_action": {
+    "title": "Helping teams in the world with focus",
+    "description": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
+    "button": {
+      "label": "Download The Theme",
+      "link": "https://themefisher.com/astro-themes/pinwheel-astro"
+    }
+  },
+
+  "disqus": {
+    "enable": true,
+    "shortname": "themefisher-template",
+    "settings": {}
+  },
+
+  "params": {
+    "footer_description": "Inspiring and Anchoring Trust in Science, Research and Innovation",
+    "email": "info@ianus-project.eu",
+    "contact_form_action": "#",
+    "copyright": "Copyright © 2024 [Datalab](https://datalab.csd.auth.gr)"
+  },
+
+  "metadata": {
+    "meta_author": "IANUS",
+    "meta_image": "/images/logo_ianus.png",
+    "meta_description": "IANUS Case Studies"
+  }
+}

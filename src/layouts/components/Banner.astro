@@ -1,0 +1,32 @@
+---
+import { Image } from "@astrojs/image/components";
+---
+
+<section class="section banner relative">
+  <div class="container">
+    <div class="row items-center">
+      <div class="lg:col-6">
+        <h1>Trust in Science?</h1>
+        <h4 class="text-gray-500">Welcome to IANUS case-studies.<br/>Let's explore trust in AI!</h4>
+        <a class="btn btn-white mt-6" href="/" target="_blank">Start now</a>
+      </div>
+      <div class="lg:col-6">
+        <Image
+          class="w-full object-contain"
+          alt="banner"
+          src="/images/ianus_cs_hero_img.png"
+          width={650}
+          height={550}
+        />
+      </div>
+    </div>
+  </div>
+
+  <Image
+    class="banner-shape absolute -top-28 right-0 -z-[1] w-full max-w-[30%]"
+    alt="banner"
+    src="/images/banner-shape.png"
+    width={496}
+    height={466}
+  />
+</section>

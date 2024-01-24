@@ -1,0 +1,27 @@
+---
+import PageHeader from "@components/PageHeader.astro";
+import Shape from "@components/Shape.astro";
+import Base from "@layouts/Base.astro";
+import StepperWithContent from "@layouts/function-components/StepperWithContent.jsx";
+const page_data = {
+"title":"Survey",
+"page_title":"Survey"
+};
+---
+
+<Base
+  title="Survey"
+  meta_title="ddsds"
+  description="dsdsd"
+  image=""
+>
+  <Shape />
+  <section class="page-hero py-16">
+    <div class="container">
+      <div class="page-hero-content mx-auto max-w-[768px] text-center">
+        <PageHeader page_data={page_data} />
+      </div>
+      <StepperWithContent client:load />
+    </div>
+  </section>
+</Base>

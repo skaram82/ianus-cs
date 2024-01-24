@@ -22,8 +22,10 @@ if (theme.fonts.font_family.secondary) {
   fontSecondaryType = theme.fonts.font_family.secondary_type;
 }
 
+const withMT = require("@material-tailwind/react/utils/withMT");
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module.exports = withMT({
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   darkMode: "class",
   theme: {
@@ -73,4 +75,4 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("tailwind-bootstrap-grid")({ generateContainer: false }),
   ],
-};
+});

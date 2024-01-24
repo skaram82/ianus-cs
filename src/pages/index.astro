@@ -4,10 +4,6 @@ import Banner from "@layouts/components/Banner.astro";
 import AboutIanus from "@layouts/components/AboutIanus.astro";
 import AboutCshub from "@layouts/components/AboutCshub.astro";
 import Cta from "@layouts/partials/Cta.astro";
-import { getEntryBySlug } from "astro:content";
-
-const homepage = await getEntryBySlug("homepage", "index");
-const { banner, key_features, service, testimonial } = homepage.data;
 ---
 
 <Base>

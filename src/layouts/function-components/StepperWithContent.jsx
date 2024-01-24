@@ -1,5 +1,5 @@
 import React from "react";
-import { Stepper, Step, Button } from "@material-tailwind/react/index.js";
+import { Stepper, Step } from "@material-tailwind/react/index.js";
 import { TbTargetArrow } from "react-icons/tb/index.js";
  
 export function StepperWithContent() {
@@ -46,12 +46,12 @@ export function StepperWithContent() {
         </Step>
       </Stepper>
       <div className="mt-32 flex justify-between">
-        <Button onClick={handlePrev} disabled={isFirstStep}>
+        <button type="button" className="btn btn-primary" onClick={handlePrev} disabled={isFirstStep}>
           Prev
-        </Button>
-        <Button onClick={handleNext} disabled={isLastStep}>
+        </button>
+        <button  type="button" className="btn btn-primary" onClick={handleNext} disabled={isLastStep}>
           Next
-        </Button>
+        </button>
       </div>
       <section className="section relative">
         {activeStep === 0 ? (

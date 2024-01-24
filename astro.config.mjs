@@ -3,7 +3,6 @@ import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-import AutoImport from "astro-auto-import";
 import { defineConfig } from "astro/config";
 import remarkCollapse from "remark-collapse";
 import remarkToc from "remark-toc";
@@ -24,19 +23,6 @@ export default defineConfig({
     }),
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
-    }),
-    AutoImport({
-      imports: [
-        "@shortcodes/Button",
-        "@shortcodes/Accordion",
-        "@shortcodes/Notice",
-        "@shortcodes/Video",
-        "@shortcodes/Youtube",
-        "@shortcodes/Blockquote",
-        "@shortcodes/Badge",
-        "@shortcodes/ContentBlock",
-        "@shortcodes/Changelog",
-      ],
     }),
     mdx(),
   ],

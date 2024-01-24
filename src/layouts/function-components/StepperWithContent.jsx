@@ -1,5 +1,5 @@
 import React from "react";
-import { Stepper, Step } from "@material-tailwind/react/index.js";
+import { Stepper, Step } from "@material-tailwind/react";
 import { TbTargetArrow } from "react-icons/tb/index.js";
  
 export function StepperWithContent() {

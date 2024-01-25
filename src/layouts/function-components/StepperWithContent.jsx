@@ -4,17 +4,30 @@ import React from "react";
  
 export function StepperWithContent() {
   const [activeStep, setActiveStep] = React.useState(0);
-  const [isLastStep, setIsLastStep] = React.useState(false);
-  const [isFirstStep, setIsFirstStep] = React.useState(false);
+  // const [isLastStep, setIsLastStep] = React.useState(false);
+  // const [isFirstStep, setIsFirstStep] = React.useState(false);
+  const [stepCount, setStepCount] = React.useState(0);
  
-  const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
-  const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
+  // const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
+  // const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
 
-  const stepsObj = {
-    0: ["Step 1", "Details about your account."],
-    1: ["Step 2", "Details about your account."],
-    2: ["Step 3", "Details about your account."]
-  };
+  // const stepsObj = {
+  //   0: ["Step 1", "Details about your account."],
+  //   1: ["Step 2", "Details about your account."],
+  //   2: ["Step 3", "Details about your account."]
+  // };
+
+  const handleNext = () => {
+    setStepCount(stepCount + 1);
+    setActiveStep(stepCount);
+  }
+
+  const handlePrev = () => {
+    setStepCount(stepCount - 1);
+    setActiveStep(stepCount);
+  }
+
+  const stepsArr = ["Step 1", "Step 2", "Step 3"];
  
   return (
     <div className="w-full px-24 py-4">   
@@ -43,26 +56,50 @@ export function StepperWithContent() {
         </li>
     </ol>
     <form
-        netlify
-        netlify-honeypot
+        netlify = "true"
+        netlify-honeypot = "true"
         name="feedback"
         method="POST"
         action="/success"
       >
-        <p class="hidden">
+        <p className="hidden">
           <label>
             Don’t fill this out if you’re human: <input name="bot-field" />
           </label>
         </p>
         <input type="hidden" name="form-name" value="feedback" />
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" />
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" required />
-        <label for="feedback">What is your feedback?</label>
-        <textarea id="feedback" wrap="soft" name="feedback" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" required></textarea>
-        <button className="btn btn-primary mt-10" type="submit">Submit</button>
+        {(stepCount == 0) ? (
+          <div>
+            <label htmlFor="name">Name</label>
+            <input id="name" type="text" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" />
+          </div>
+        ) : (stepCount == 1) ? (
+          <div>
+            <label htmlFor="email">Email</label>
+            <input id="email" type="email" name="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" required />
+          </div>
+        ) : (
+          <div>
+            <label htmlFor="feedback">What is your feedback?</label>
+            <textarea id="feedback" wrap="soft" name="feedback" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" required></textarea>
+            <button className="btn btn-primary mt-10" type="submit">Submit</button>
+          </div>
+        )}        
       </form>
+
+      <div className="mt-32 flex justify-between">
+        <button type="button" onClick={handlePrev} className={stepCount == 0 ? "btn rounded-full bg-gray-200" : "btn btn-primary"} disabled={stepCount == 0 ? true : false}>
+          {stepCount == 0 ? "Start" : `Previous Step: ${stepsArr[stepCount - 1]}`}
+        </button>
+        <button type="button" onClick={handleNext} className={stepCount == stepsArr.length - 1 ? "btn rounded-full bg-gray-200" : "btn btn-primary"} disabled={stepCount == stepsArr.length - 1 ? true : false}>
+          {stepCount == stepsArr.length - 1 ? "End" : `Next Step: ${stepsArr[stepCount + 1]}`}
+        </button>
+      </div>
+
+
+
+
+
     {/* <form name="form1">
         <h3 className="mb-4 text-lg font-medium leading-none text-gray-900">Invoice details</h3>
         <div className="grid gap-4 mb-4 sm:grid-cols-2">

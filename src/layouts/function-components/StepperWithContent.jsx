@@ -7,6 +7,11 @@ export function StepperWithContent() {
   // const [isLastStep, setIsLastStep] = React.useState(false);
   // const [isFirstStep, setIsFirstStep] = React.useState(false);
   const [stepCount, setStepCount] = React.useState(0);
+  const [formEntries, setFormEntries] = React.useState({
+    name: "",
+    email: "",
+    feedback: ""
+  });
  
   // const handleNext = () => !isLastStep && setActiveStep((cur) => cur + 1);
   // const handlePrev = () => !isFirstStep && setActiveStep((cur) => cur - 1);
@@ -71,17 +76,17 @@ export function StepperWithContent() {
         {(stepCount == 0) ? (
           <div>
             <label htmlFor="name">Name</label>
-            <input id="name" type="text" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" />
+            <input value={formEntries.name} id="name" type="text" name="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" />
           </div>
         ) : (stepCount == 1) ? (
           <div>
             <label htmlFor="email">Email</label>
-            <input id="email" type="email" name="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" required />
+            <input value={formEntries.email} id="email" type="email" name="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" required />
           </div>
         ) : (
           <div>
             <label htmlFor="feedback">What is your feedback?</label>
-            <textarea id="feedback" wrap="soft" name="feedback" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" required></textarea>
+            <textarea value={formEntries.feedback} id="feedback" wrap="soft" name="feedback" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" required></textarea>
             <button className="btn btn-primary mt-10" type="submit">Submit</button>
           </div>
         )}        

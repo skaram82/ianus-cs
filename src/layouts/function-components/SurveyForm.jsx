@@ -28,13 +28,17 @@ function SurveyForm() {
     };
   };
 
-  const handleNext = () => {
-    setStep(step + 1);
-  }
+  const handleNext = (e) => {
+    if (step === 4) {
+      e.preventDefault()
+    } else {
+      setStep(step + 1);
+    };
+  };
 
   const handlePrev = () => {
     setStep(step - 1);
-  }
+  };
 
   // console.log(step);
 

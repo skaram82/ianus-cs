@@ -80,7 +80,7 @@ function SurveyForm() {
             Don’t fill this out if you’re human: <input name="bot-field" />
           </label>
         </p>
-        <input type="hidden" name="survey" value="survey" />
+        <input type="hidden" name="form-name" value="survey" />
         {stepsComponent()}
         {/* <button className="btn btn-primary mt-10" type="submit">Submit</button> */}
         <div className={`mt-32 flex ${step === 0 ? "justify-end" : "justify-between"}`}>

@@ -68,6 +68,12 @@ function SurveyForm() {
             </div>
         </li>
     </ol>
+    <form name="survey" data-netlify = "true" netlify-honeypot = "bot-field" hidden>
+      <input id="name" type="text" name="name" value={formData.name} readOnly />
+      <input id="email" type="email" name="email" value={formData.email} readOnly />
+      <input id="info" type="text" name="info" value={formData.info} readOnly />
+      <input id="feedback" type="text" name="feedback" value={formData.feedback} readOnly />
+    </form>
     <form
         data-netlify = "true"
         netlify-honeypot = "bot-field"

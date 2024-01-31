@@ -36,7 +36,7 @@ function SurveyForm() {
     setStep(step - 1);
   }
 
-  console.log(step);
+  // console.log(step);
 
   return (
     <div className="w-full px-24 py-4">   
@@ -76,7 +76,7 @@ function SurveyForm() {
             Don’t fill this out if you’re human: <input name="bot-field" />
           </label>
         </p>
-        <input type="hidden" name="survey" value="hidden-feedback" />
+        <input type="hidden" name="survey" value="survey" />
         {stepsComponent()}
         {/* <button className="btn btn-primary mt-10" type="submit">Submit</button> */}
         <div className={`mt-32 flex ${step === 0 ? "justify-end" : "justify-between"}`}>

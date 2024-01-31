@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "IANUS Case Studies",
-    "base_url": "http://localhost:3000/",
+    "base_url": "https://case-studies.trustinscience.eu/",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",

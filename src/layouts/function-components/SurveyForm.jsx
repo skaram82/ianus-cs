@@ -66,10 +66,10 @@ function SurveyForm() {
     </ol>
     <form
         data-netlify = "true"
-        netlify-honeypot = "true"
+        netlify-honeypot = "bot-field"
         name="survey"
         method="POST"
-        action="/success"
+        action="/success/"
       >
         <p className="hidden">
           <label>

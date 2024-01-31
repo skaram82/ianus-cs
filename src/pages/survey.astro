@@ -22,6 +22,12 @@ const page_data = {
       <div class="page-hero-content mx-auto max-w-[768px] text-center">
         <PageHeader page_data={page_data} />
       </div>
+      <form name="survey" hidden>
+        <input id="name" type="text" name="name" />
+        <input id="email" type="email" name="email" />
+        <input id="info" type="text" name="info" />
+        <input id="feedback" type="text" name="feedback" />
+      </form>
       <!-- <StepperWithContent client:load /> -->
       <SurveyForm client:load />
     </div>

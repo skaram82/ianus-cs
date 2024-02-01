@@ -124,8 +124,8 @@ function SurveyForm() {
       <input id="feedback" type="text" name="feedback" value={formData.feedback} readOnly />
     </form> */}
     <form
-        // data-netlify = "true"
-        // netlify-honeypot = "bot-field"
+        data-netlify = "true"
+        netlify-honeypot = "bot-field"
         name="survey"
         method="POST"
         action="/success"

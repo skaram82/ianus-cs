@@ -59,25 +59,25 @@ function SurveyForm() {
   //   };
   // };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
-      })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        // Handle successful form submission
-        console.log('Form submitted successfully');
-        console.log(formData);
-        navigate("/success");
-        // Reset form data or navigate to a success page
-      })
-      .catch((error) => alert(error));
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   fetch("/", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //       body: new URLSearchParams(formData).toString(),
+  //     })
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error('Network response was not ok');
+  //       }
+  //       // Handle successful form submission
+  //       console.log('Form submitted successfully');
+  //       console.log(formData);
+  //       navigate("/success");
+  //       // Reset form data or navigate to a success page
+  //     })
+  //     .catch((error) => alert(error));
+  // };
 
   const handleNext = () => {
     setStep(step + 1);
@@ -126,8 +126,8 @@ function SurveyForm() {
         data-netlify = "true"
         netlify-honeypot = "bot-field"
         name="survey"
-        // method="POST"
-        // action="/success"
+        method="POST"
+        action="/success"
       >
         <p className="hidden">
           <label>

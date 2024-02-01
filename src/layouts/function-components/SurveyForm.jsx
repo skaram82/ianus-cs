@@ -59,6 +59,25 @@ function SurveyForm() {
   //   };
   // };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetch("/survey", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData,
+      })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        // Handle successful form submission
+        console.log('Form submitted successfully');
+        console.log(formData)
+        // Reset form data or navigate to a success page
+      })
+      .catch((error) => alert(error));
+  };
+
   const handleNext = () => {
     setStep(step + 1);
   };
@@ -126,7 +145,7 @@ function SurveyForm() {
         <button type="button" onClick={handleNext} className={`btn btn-primary ${step === 3 && "hidden"}`} >
           Next
         </button>
-        <button type="submit" className={`btn btn-primary ${step !== 3 && "hidden"}`}>
+        <button type="submit" onClick={handleSubmit} className={`btn btn-primary ${step !== 3 && "hidden"}`}>
           Submit
         </button>
       </div>

@@ -88,7 +88,6 @@ function SurveyForm() {
   };
 
   // console.log(step);
-  console.log(formData);
 
   return (
     <div className="w-full px-24 py-4">   
@@ -136,8 +135,58 @@ function SurveyForm() {
           </label>
         </p>
         <input type="hidden" name="form-name" value="survey" />
+          <>
+            <h2>Step 1</h2>
+            <div>
+              <label htmlFor="name">Name</label>
+              <input 
+              value={formData.name} 
+              id="name" 
+              type="text" 
+              name="name" 
+              onChange={e => setFormData({...formData, name: e.target.value})}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
+              />
+            </div>
+            <h2>Step 2</h2>
+            <div>
+              <label htmlFor="email">Email</label>
+              <input 
+              value={formData.email} 
+              id="email" 
+              type="email" 
+              name="email" 
+              onChange={e => setFormData({...formData, email: e.target.value})}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
+              />
+            </div>
+            <h2>Step 3</h2>
+            <div>
+              <label htmlFor="info">Info</label>
+              <input 
+              value={formData.info} 
+              id="info" 
+              type="text" 
+              name="info" 
+              onChange={e => setFormData({...formData, info: e.target.value})}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
+              />
+            </div>
+            <h2>Step 4</h2>
+            <div>
+              <label htmlFor="feedback">Feedback</label>
+              <input 
+              value={formData.feedback} 
+              id="feedback" 
+              type="text" 
+              name="feedback" 
+              onChange={e => setFormData({...formData, feedback: e.target.value})}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
+              />
+            </div>
+          </>
         {/* {stepsComponent()} */}
-        {(step === 0) ? (
+        {/* {(step === 0) ? (
           <>
             <h2>Step 1</h2>
             <div>
@@ -197,19 +246,22 @@ function SurveyForm() {
               />
             </div>
           </>
-        )}
+        )} */}
         {/* <button className="btn btn-primary mt-10" type="submit">Submit</button> */}
         <div className={`mt-32 flex ${step === 0 ? "justify-end" : "justify-between"}`}>
-        <button type="button" onClick={handlePrev} className={`btn btn-primary ${step === 0 && "hidden"}`}>
+        {/* <button type="button" onClick={handlePrev} className={`btn btn-primary ${step === 0 && "hidden"}`}>
           {step > 0 && "Back"}
-        </button>
+        </button> */}
         {/* <button type={step === 4 ? "submit" : "button"} onClick={handleNext} className= "btn btn-primary">
           {step === 3 ? "Submit" : "Next"}
         </button> */}
-        <button type="button" onClick={handleNext} className={`btn btn-primary ${step === 3 && "hidden"}`} >
+        {/* <button type="button" onClick={handleNext} className={`btn btn-primary ${step === 3 && "hidden"}`} >
           Next
-        </button>
-        <button type="submit" className={`btn btn-primary ${step !== 3 && "hidden"}`}>
+        </button> */}
+        {/* <button type="submit" className={`btn btn-primary ${step !== 3 && "hidden"}`}>
+          Submit
+        </button> */}
+        <button type="submit" className={`btn btn-primary`}>
           Submit
         </button>
       </div>

@@ -28,26 +28,39 @@ function SurveyForm() {
     };
   };
 
-  const handleNext = (e) => {
-    if (step === 4) {
-      e.preventDefault();
-      fetch("/survey", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formData,
-      })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        // Handle successful form submission
-        console.log('Form submitted successfully');
-        // Reset form data or navigate to a success page
-      })
-      .catch((error) => alert(error));
-    } else {
-      setStep(step + 1);
-    };
+  // const handleNext = (e) => {
+  //   if (step === 4) {
+  //     e.preventDefault();
+  //     fetch("/survey", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //       body: formData,
+  //     })
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error('Network response was not ok');
+  //       }
+  //       // Handle successful form submission
+  //       console.log('Form submitted successfully');
+  //       console.log(formData)
+  //       // Reset form data or navigate to a success page
+  //     })
+  //     .catch((error) => alert(error));
+  //   } else {
+  //     setStep(step + 1);
+  //   };
+  // };
+  
+  // const handleNext = () => {
+  //   if (step === 4) {
+  //     console.log(formData);
+  //   } else {
+  //     setStep(step + 1);
+  //   };
+  // };
+
+  const handleNext = () => {
+    setStep(step + 1);
   };
 
   const handlePrev = () => {
@@ -107,8 +120,14 @@ function SurveyForm() {
         <button type="button" onClick={handlePrev} className={`btn btn-primary ${step === 0 && "hidden"}`}>
           {step > 0 && "Back"}
         </button>
-        <button type={step === 4 ? "submit" : "button"} onClick={handleNext} className= "btn btn-primary">
+        {/* <button type={step === 4 ? "submit" : "button"} onClick={handleNext} className= "btn btn-primary">
           {step === 3 ? "Submit" : "Next"}
+        </button> */}
+        <button type="button" onClick={handleNext} className={`btn btn-primary ${step === 3 && "hidden"}`} >
+          Next
+        </button>
+        <button type="submit" className={`btn btn-primary ${step !== 3 && "hidden"}`}>
+          Submit
         </button>
       </div>
       </form>

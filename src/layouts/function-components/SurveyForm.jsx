@@ -135,9 +135,9 @@ function SurveyForm() {
           </label>
         </p>
         <input type="hidden" name="form-name" value="survey" />
-          <>
-            <h2>Step 1</h2>
-            <div>
+          <>            
+            <div className={step !== 0 ? "hidden" : ""}>
+              <h2>Step 1</h2>
               <label htmlFor="name">Name</label>
               <input 
               value={formData.name} 
@@ -147,9 +147,9 @@ function SurveyForm() {
               onChange={e => setFormData({...formData, name: e.target.value})}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
               />
-            </div>
-            <h2>Step 2</h2>
-            <div>
+            </div>            
+            <div className={step !== 1 ? "hidden" : ""}>
+              <h2>Step 2</h2>
               <label htmlFor="email">Email</label>
               <input 
               value={formData.email} 
@@ -159,9 +159,9 @@ function SurveyForm() {
               onChange={e => setFormData({...formData, email: e.target.value})}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
               />
-            </div>
-            <h2>Step 3</h2>
-            <div>
+            </div>            
+            <div className={step !== 2 ? "hidden" : ""}>
+              <h2>Step 3</h2>
               <label htmlFor="info">Info</label>
               <input 
               value={formData.info} 
@@ -171,9 +171,9 @@ function SurveyForm() {
               onChange={e => setFormData({...formData, info: e.target.value})}
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
               />
-            </div>
-            <h2>Step 4</h2>
-            <div>
+            </div>            
+            <div className={step !== 3 ? "hidden" : ""}>
+              <h2>Step 4</h2>
               <label htmlFor="feedback">Feedback</label>
               <input 
               value={formData.feedback} 
@@ -249,21 +249,21 @@ function SurveyForm() {
         )} */}
         {/* <button className="btn btn-primary mt-10" type="submit">Submit</button> */}
         <div className={`mt-32 flex ${step === 0 ? "justify-end" : "justify-between"}`}>
-        {/* <button type="button" onClick={handlePrev} className={`btn btn-primary ${step === 0 && "hidden"}`}>
+        <button type="button" onClick={handlePrev} className={`btn btn-primary ${step === 0 ? "hidden" : ""}`}>
           {step > 0 && "Back"}
-        </button> */}
+        </button>
         {/* <button type={step === 4 ? "submit" : "button"} onClick={handleNext} className= "btn btn-primary">
           {step === 3 ? "Submit" : "Next"}
         </button> */}
-        {/* <button type="button" onClick={handleNext} className={`btn btn-primary ${step === 3 && "hidden"}`} >
+        <button type="button" onClick={handleNext} className={`btn btn-primary ${step === 3 ? "hidden" : ""}`} >
           Next
-        </button> */}
-        {/* <button type="submit" className={`btn btn-primary ${step !== 3 && "hidden"}`}>
-          Submit
-        </button> */}
-        <button type="submit" className={`btn btn-primary`}>
+        </button>
+        <button type="submit" className={`btn btn-primary ${step !== 3 ? "hidden" : ""}`}>
           Submit
         </button>
+        {/* <button type="submit" className={`btn btn-primary`}>
+          Submit
+        </button> */}
       </div>
       </form>
     </div>

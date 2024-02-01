@@ -30,7 +30,21 @@ function SurveyForm() {
 
   const handleNext = (e) => {
     if (step === 4) {
-      e.preventDefault()
+      e.preventDefault();
+      fetch("/survey", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData,
+      })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        // Handle successful form submission
+        console.log('Form submitted successfully');
+        // Reset form data or navigate to a success page
+      })
+      .catch((error) => alert(error));
     } else {
       setStep(step + 1);
     };

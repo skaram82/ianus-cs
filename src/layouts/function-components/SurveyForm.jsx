@@ -147,7 +147,7 @@ function SurveyForm() {
         <button type="button" onClick={handleNext} className={`btn btn-primary ${step === 3 && "hidden"}`} >
           Next
         </button>
-        <button type="submit" onClick={handleSubmit} className={`btn btn-primary ${step !== 3 && "hidden"}`}>
+        <button type="submit" className={`btn btn-primary ${step !== 3 && "hidden"}`}>
           Submit
         </button>
       </div>

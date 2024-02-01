@@ -136,7 +136,68 @@ function SurveyForm() {
           </label>
         </p>
         <input type="hidden" name="form-name" value="survey" />
-        {stepsComponent()}
+        {/* {stepsComponent()} */}
+        {(step === 0) ? (
+          <>
+            <h2>Step 1</h2>
+            <div>
+              <label htmlFor="name">Name</label>
+              <input 
+              value={formData.name} 
+              id="name" 
+              type="text" 
+              name="name" 
+              onChange={e => setFormData({...formData, name: e.target.value})}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
+              />
+            </div>
+          </>
+        ) : (step === 1) ? (
+          <>
+            <h2>Step 2</h2>
+            <div>
+              <label htmlFor="email">Email</label>
+              <input 
+              value={formData.email} 
+              id="email" 
+              type="email" 
+              name="email" 
+              onChange={e => setFormData({...formData, email: e.target.value})}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
+              />
+            </div>
+          </>
+        ) : (step === 2) ? (
+          <>
+            <h2>Step 3</h2>
+            <div>
+              <label htmlFor="info">Info</label>
+              <input 
+              value={formData.info} 
+              id="info" 
+              type="text" 
+              name="info" 
+              onChange={e => setFormData({...formData, info: e.target.value})}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
+              />
+            </div>
+          </>
+        ) : (
+          <>
+            <h2>Step 4</h2>
+            <div>
+              <label htmlFor="feedback">Feedback</label>
+              <input 
+              value={formData.feedback} 
+              id="feedback" 
+              type="text" 
+              name="feedback" 
+              onChange={e => setFormData({...formData, feedback: e.target.value})}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
+              />
+            </div>
+          </>
+        )}
         {/* <button className="btn btn-primary mt-10" type="submit">Submit</button> */}
         <div className={`mt-32 flex ${step === 0 ? "justify-end" : "justify-between"}`}>
         <button type="button" onClick={handlePrev} className={`btn btn-primary ${step === 0 && "hidden"}`}>

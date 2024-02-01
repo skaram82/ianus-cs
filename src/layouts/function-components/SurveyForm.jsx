@@ -13,72 +13,6 @@ function SurveyForm() {
     feedback: ''
   });
 
-  const stepsComponent = () => {
-    switch (step) {
-      case 0: 
-        return <Step1 formData={formData} setFormData={setFormData} />;
-        case 1: 
-        return <Step2 formData={formData} setFormData={setFormData} />;
-        case 2: 
-        return <Step3 formData={formData} setFormData={setFormData} />;
-        case 3: 
-        return <Step4 formData={formData} setFormData={setFormData} />;
-      default: 
-        return <Step1 formData={formData} setFormData={setFormData} />;
-    };
-  };
-
-  // const handleNext = (e) => {
-  //   if (step === 4) {
-  //     e.preventDefault();
-  //     fetch("/survey", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //       body: formData,
-  //     })
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error('Network response was not ok');
-  //       }
-  //       // Handle successful form submission
-  //       console.log('Form submitted successfully');
-  //       console.log(formData)
-  //       // Reset form data or navigate to a success page
-  //     })
-  //     .catch((error) => alert(error));
-  //   } else {
-  //     setStep(step + 1);
-  //   };
-  // };
-  
-  // const handleNext = () => {
-  //   if (step === 4) {
-  //     console.log(formData);
-  //   } else {
-  //     setStep(step + 1);
-  //   };
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   fetch("/", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //       body: new URLSearchParams(formData).toString(),
-  //     })
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error('Network response was not ok');
-  //       }
-  //       // Handle successful form submission
-  //       console.log('Form submitted successfully');
-  //       console.log(formData);
-  //       navigate("/success");
-  //       // Reset form data or navigate to a success page
-  //     })
-  //     .catch((error) => alert(error));
-  // };
-
   const handleNext = () => {
     setStep(step + 1);
   };
@@ -86,8 +20,6 @@ function SurveyForm() {
   const handlePrev = () => {
     setStep(step - 1);
   };
-
-  // console.log(step);
 
   return (
     <div className="w-full px-24 py-4">   
@@ -115,13 +47,6 @@ function SurveyForm() {
             </div>
         </li>
     </ol>
-    {/* <form name="survey" data-netlify = "true" netlify-honeypot = "bot-field" action="/success" method="POST" hidden> */}
-    {/* <form name="survey" data-netlify = "true" netlify-honeypot = "bot-field" hidden>
-      <input id="name" type="text" name="name" value={formData.name} readOnly />
-      <input id="email" type="email" name="email" value={formData.email} readOnly />
-      <input id="info" type="text" name="info" value={formData.info} readOnly />
-      <input id="feedback" type="text" name="feedback" value={formData.feedback} readOnly />
-    </form> */}
     <form
         data-netlify = "true"
         netlify-honeypot = "bot-field"
@@ -135,7 +60,7 @@ function SurveyForm() {
           </label>
         </p>
         <input type="hidden" name="form-name" value="survey" />
-          <>            
+          <div>            
             <div className={step !== 0 ? "hidden" : ""}>
               <h2>Step 1</h2>
               <label htmlFor="name">Name</label>
@@ -184,86 +109,17 @@ function SurveyForm() {
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
               />
             </div>
-          </>
-        {/* {stepsComponent()} */}
-        {/* {(step === 0) ? (
-          <>
-            <h2>Step 1</h2>
-            <div>
-              <label htmlFor="name">Name</label>
-              <input 
-              value={formData.name} 
-              id="name" 
-              type="text" 
-              name="name" 
-              onChange={e => setFormData({...formData, name: e.target.value})}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
-              />
-            </div>
-          </>
-        ) : (step === 1) ? (
-          <>
-            <h2>Step 2</h2>
-            <div>
-              <label htmlFor="email">Email</label>
-              <input 
-              value={formData.email} 
-              id="email" 
-              type="email" 
-              name="email" 
-              onChange={e => setFormData({...formData, email: e.target.value})}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
-              />
-            </div>
-          </>
-        ) : (step === 2) ? (
-          <>
-            <h2>Step 3</h2>
-            <div>
-              <label htmlFor="info">Info</label>
-              <input 
-              value={formData.info} 
-              id="info" 
-              type="text" 
-              name="info" 
-              onChange={e => setFormData({...formData, info: e.target.value})}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
-              />
-            </div>
-          </>
-        ) : (
-          <>
-            <h2>Step 4</h2>
-            <div>
-              <label htmlFor="feedback">Feedback</label>
-              <input 
-              value={formData.feedback} 
-              id="feedback" 
-              type="text" 
-              name="feedback" 
-              onChange={e => setFormData({...formData, feedback: e.target.value})}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 block w-full p-2.5" 
-              />
-            </div>
-          </>
-        )} */}
-        {/* <button className="btn btn-primary mt-10" type="submit">Submit</button> */}
+          </div>
         <div className={`mt-32 flex ${step === 0 ? "justify-end" : "justify-between"}`}>
         <button type="button" onClick={handlePrev} className={`btn btn-primary ${step === 0 ? "hidden" : ""}`}>
           {step > 0 && "Back"}
         </button>
-        {/* <button type={step === 4 ? "submit" : "button"} onClick={handleNext} className= "btn btn-primary">
-          {step === 3 ? "Submit" : "Next"}
-        </button> */}
         <button type="button" onClick={handleNext} className={`btn btn-primary ${step === 3 ? "hidden" : ""}`} >
           Next
         </button>
         <button type="submit" className={`btn btn-primary ${step !== 3 ? "hidden" : ""}`}>
           Submit
         </button>
-        {/* <button type="submit" className={`btn btn-primary`}>
-          Submit
-        </button> */}
       </div>
       </form>
     </div>

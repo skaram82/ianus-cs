@@ -88,6 +88,7 @@ function SurveyForm() {
   };
 
   // console.log(step);
+  console.log(formData);
 
   return (
     <div className="w-full px-24 py-4">   

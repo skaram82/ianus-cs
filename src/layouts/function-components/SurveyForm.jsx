@@ -134,7 +134,7 @@ function SurveyForm() {
       </li>
       <li className={`flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-4 after:inline-block ${step <= 5 ? "after:border-gray-100" : "after:border-blue-100"}`}>
         <div className={`flex items-center justify-center w-10 h-10 rounded-full lg:h-12 lg:w-12 shrink-0 ${step >= 5 ? "bg-blue-100" : "bg-gray-100"}`}>
-          <svg className={`w-4 h-4 lg:w-6 lg:h-6 ${step >= 4 ? "text-blue-600" : "text-gray-600"}`} xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
+          <svg className={`w-4 h-4 lg:w-6 lg:h-6 ${step >= 5 ? "text-blue-600" : "text-gray-600"}`} xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512">
             <path d="M 464 256 Q 464 199 436 152 L 436 152 Q 409 105 360 76 Q 311 48 256 48 Q 201 48 152 76 Q 103 105 76 152 Q 48 199 48 256 Q 48 313 76 360 Q 103 407 152 436 Q 201 464 256 464 Q 311 464 360 436 Q 409 407 436 360 Q 464 313 464 256 L 464 256 Z M 0 256 Q 1 186 34 128 L 34 128 Q 68 70 128 34 Q 189 0 256 0 Q 323 0 384 34 Q 444 70 478 128 Q 511 186 512 256 Q 511 326 478 384 Q 444 442 384 478 Q 323 512 256 512 Q 189 512 128 478 Q 68 442 34 384 Q 1 326 0 256 L 0 256 Z M 224 129 Q 244 138 239 160 L 201 272 L 272 272 L 272 216 Q 274 194 296 192 Q 318 194 320 216 L 320 272 L 328 272 Q 350 274 352 296 Q 350 318 328 320 L 320 320 L 320 360 Q 318 382 296 384 Q 274 382 272 360 L 272 320 L 168 320 Q 156 320 149 310 Q 142 300 145 288 L 193 144 Q 202 124 224 129 L 224 129 Z" />
           </svg>
         </div>

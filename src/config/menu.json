@@ -5,23 +5,23 @@
       "url": "/"
     },
     {
-      "name": "Survey",
-      "url": "/survey"
+      "name": "About",
+      "url": "/about"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Case Studies",
+      "url": "/case-studies"
     }
   ],
 
   "footer": [
     {
-      "name": "Survey",
-      "url": "/survey"
+      "name": "About",
+      "url": "/about"
     },
     {
-      "name": "Contact",
-      "url": "/contact"
+      "name": "Case Studies",
+      "url": "/case-studies"
     },
     {
       "name": "IANUS",

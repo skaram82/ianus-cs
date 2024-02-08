@@ -14,6 +14,7 @@ function SurveyForm() {
     q6: '',
     q7: '',
     q8: '',
+    q9: '',
   });
   const [errorVal, setErrorVal] = useState("");
   // define chart refs for embedding charts from observable
@@ -33,15 +34,18 @@ function SurveyForm() {
       } else {
         setErrorVal("");
         setStep(step + 1);
+        window.scrollTo(0, 0);
       }
     } else if (step === 1) {
       setStep(step + 1);
+      window.scrollTo(0, 0);
     } else if (step === 2) {
       if (formData.q1 === "" || formData.q3 === "") {
         setErrorVal("Please answer the required fields");
       } else {
         setErrorVal("");
         setStep(step + 1);
+        window.scrollTo(0, 0);
       }
     } else if (step === 3) {
       if (formData.q4 === "" || formData.q5 === "") {
@@ -49,6 +53,7 @@ function SurveyForm() {
       } else {
         setErrorVal("");
         setStep(step + 1);
+        window.scrollTo(0, 0);
       }
     } else if (step === 4) {
       if (formData.q6 === "") {
@@ -56,14 +61,16 @@ function SurveyForm() {
       } else {
         setErrorVal("");
         setStep(step + 1);
+        window.scrollTo(0, 0);
       }
     } 
     else if (step === 5) {
-      if (formData.q7 === "" || formData.q8 === "") {
+      if (formData.q7 === "" || formData.q8 === "" || formData.q9 === "") {
         setErrorVal("Please answer the required fields");
       } else {
         setErrorVal("");
         setStep(step + 1);
+        window.scrollTo(0, 0);
       }
     } else {
       setErrorVal("");
@@ -78,12 +85,15 @@ function SurveyForm() {
         q6: '',
         q7: '',
         q8: '',
-      })
+        q9: '',
+      });
+      window.scrollTo(0, 0);
     }
   };
 
   const handlePrev = () => {
     setStep(step - 1);
+    window.scrollTo(0, 0);
   };
 
   useEffect(() => {
@@ -208,7 +218,7 @@ function SurveyForm() {
                     name="q1" 
                     checked={formData.q1 === "Yes"}
                     onChange={e => setFormData({...formData, q1: e.target.value})}
-                    className="px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                    className="px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                     />
                     <label htmlFor="q1-no" className="px-2"><strong>No</strong></label>
                     <input 
@@ -219,7 +229,7 @@ function SurveyForm() {
                     name="q1" 
                     checked={formData.q1 === "No"}
                     onChange={e => setFormData({...formData, q1: e.target.value})}
-                    className="px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                    className="px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                     />
                   </fieldset>
                 </div>
@@ -246,7 +256,7 @@ function SurveyForm() {
                     name="q3" 
                     checked={formData.q3 === "Yes"}
                     onChange={e => setFormData({...formData, q3: e.target.value})}
-                    className="px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                    className="px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                     />
                     <label htmlFor="q3-no" className="px-2"><strong>No</strong></label>
                     <input 
@@ -257,7 +267,7 @@ function SurveyForm() {
                     name="q3" 
                     checked={formData.q3 === "No"}
                     onChange={e => setFormData({...formData, q3: e.target.value})}
-                    className="px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                    className="px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                     />
                   </fieldset>
                 </div>
@@ -275,6 +285,7 @@ function SurveyForm() {
               <p className="text-left py-2">If you wish, hover over the chart to read the corresponding paragraph.</p>
               <div className="grid gap-5 grid-cols-2">
                 <div className="col-span-2">
+                  <h3 className="text-left py-2 text-lg">First step of the Analysis</h3>
                   <div ref={stepChart2Ref} />
                   <div className="pt-4">
                     <label htmlFor="q4 text-center"><strong>Question 4: I believe the results given in this chart are accurate</strong></label>
@@ -288,7 +299,7 @@ function SurveyForm() {
                       name="q4" 
                       checked={formData.q4 === "1"}
                       onChange={e => setFormData({...formData, q4: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -298,7 +309,7 @@ function SurveyForm() {
                       name="q4" 
                       checked={formData.q4 === "2"}
                       onChange={e => setFormData({...formData, q4: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -308,7 +319,7 @@ function SurveyForm() {
                       name="q4" 
                       checked={formData.q4 === "3"}
                       onChange={e => setFormData({...formData, q4: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -318,7 +329,7 @@ function SurveyForm() {
                       name="q4" 
                       checked={formData.q4 === "4"}
                       onChange={e => setFormData({...formData, q4: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -328,13 +339,14 @@ function SurveyForm() {
                       name="q4" 
                       checked={formData.q4 === "5"}
                       onChange={e => setFormData({...formData, q4: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <label htmlFor="q4-5" className="px-2"><strong>Definitely</strong></label>
                     </fieldset>
                   </div>
                 </div>
                 <div className="col-span-2">
+                <h3 className="text-left py-2 text-lg">Second step of the Analysis</h3>
                   <div ref={stepChart1Ref} />
                   <div className="pt-4">
                     <label htmlFor="q5 text-center"><strong>Question 5: I believe the results given in this chart are accurate</strong></label>
@@ -348,7 +360,7 @@ function SurveyForm() {
                       name="q5" 
                       checked={formData.q5 === "1"}
                       onChange={e => setFormData({...formData, q5: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -358,7 +370,7 @@ function SurveyForm() {
                       name="q5" 
                       checked={formData.q5 === "2"}
                       onChange={e => setFormData({...formData, q5: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -368,7 +380,7 @@ function SurveyForm() {
                       name="q5" 
                       checked={formData.q5 === "3"}
                       onChange={e => setFormData({...formData, q5: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -378,7 +390,7 @@ function SurveyForm() {
                       name="q5" 
                       checked={formData.q5 === "4"}
                       onChange={e => setFormData({...formData, q5: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -388,7 +400,7 @@ function SurveyForm() {
                       name="q5" 
                       checked={formData.q5 === "5"}
                       onChange={e => setFormData({...formData, q5: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <label htmlFor="q5-5" className="px-2"><strong>Definitely</strong></label>
                     </fieldset>
@@ -399,7 +411,7 @@ function SurveyForm() {
             {/* Step 4 Form */}    
             <div className={step !== 4 ? "hidden" : ""}>
               <h2 className="text-center">Task 3 - Questions</h2>
-              <p className="text-left pt-4">The step chart below (same as the second one in previous step) is produced in a collaboration between ChatGPT [link] and Data Journalists from the Incubator for Media Education and Development (iMedD) [link], a non-profit organization with a mission to support the transparency and independence in journalism and promoting meritocracy and excellence in the field. iMedD was founded in 2018 with the exclusive donation of the Stavros Niarchos Foundation (SNF).  </p>
+              <p className="text-left pt-4">The step chart below (same as the second one in previous step) is produced in a <strong>collaboration between ChatGPT [link] and Data Journalists from the Incubator for Media Education and Development (iMedD) [link]</strong>, a non-profit organization with a mission to support the transparency and independence in journalism and promoting meritocracy and excellence in the field. iMedD was founded in 2018 with the exclusive donation of the Stavros Niarchos Foundation (SNF).  </p>
               <div className="pt-4">
                 <div ref={stepChart3Ref} />
                 <div className="pt-4">
@@ -414,7 +426,7 @@ function SurveyForm() {
                     name="q6" 
                     checked={formData.q6 === "1"}
                     onChange={e => setFormData({...formData, q6: e.target.value})}
-                    className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                    className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                     />
                     <input 
                     required
@@ -424,7 +436,7 @@ function SurveyForm() {
                     name="q6" 
                     checked={formData.q6 === "2"}
                     onChange={e => setFormData({...formData, q6: e.target.value})}
-                    className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                    className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                     />
                     <input 
                     required
@@ -434,7 +446,7 @@ function SurveyForm() {
                     name="q6" 
                     checked={formData.q6 === "3"}
                     onChange={e => setFormData({...formData, q6: e.target.value})}
-                    className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                    className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                     />
                     <input 
                     required
@@ -444,7 +456,7 @@ function SurveyForm() {
                     name="q6" 
                     checked={formData.q6 === "4"}
                     onChange={e => setFormData({...formData, q6: e.target.value})}
-                    className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                    className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                     />
                     <input 
                     required
@@ -454,7 +466,7 @@ function SurveyForm() {
                     name="q6" 
                     checked={formData.q6 === "5"}
                     onChange={e => setFormData({...formData, q6: e.target.value})}
-                    className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                    className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                     />
                     <label htmlFor="q6-5" className="px-2"><strong>Definitely</strong></label>
                   </fieldset>
@@ -482,7 +494,7 @@ function SurveyForm() {
                       name="q7" 
                       checked={formData.q7 === "1"}
                       onChange={e => setFormData({...formData, q7: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -492,7 +504,7 @@ function SurveyForm() {
                       name="q7" 
                       checked={formData.q7 === "2"}
                       onChange={e => setFormData({...formData, q7: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -502,7 +514,7 @@ function SurveyForm() {
                       name="q7" 
                       checked={formData.q7 === "3"}
                       onChange={e => setFormData({...formData, q7: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -512,7 +524,7 @@ function SurveyForm() {
                       name="q7" 
                       checked={formData.q7 === "4"}
                       onChange={e => setFormData({...formData, q7: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -522,7 +534,7 @@ function SurveyForm() {
                       name="q7" 
                       checked={formData.q7 === "5"}
                       onChange={e => setFormData({...formData, q7: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <label htmlFor="q7-5" className="px-2"><strong>Definitely</strong></label>
                     </fieldset>
@@ -533,7 +545,7 @@ function SurveyForm() {
                     <h5 className="text-center">Alexis Tsipras</h5>
                     <div ref={speedChart_tsiprasRef} />
                     <div ref={legendSentiment2Ref} />
-                    <label htmlFor="q8 text-center"><strong>Question 8: I would use such a political discourse exploration tool again.</strong></label>
+                    <label htmlFor="q8 text-center"><strong>Question 8: I believe the results produced by ChatGPT and validated by data journalists  given in this chart are accurate.</strong></label>
                     <fieldset className="flex justify-center py-2 mt-6">
                       <label htmlFor="q8-1" className="px-2"><strong>Not at all</strong></label>
                       <input 
@@ -544,7 +556,7 @@ function SurveyForm() {
                       name="q8" 
                       checked={formData.q8 === "1"}
                       onChange={e => setFormData({...formData, q8: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -554,7 +566,7 @@ function SurveyForm() {
                       name="q8" 
                       checked={formData.q8 === "2"}
                       onChange={e => setFormData({...formData, q8: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -564,7 +576,7 @@ function SurveyForm() {
                       name="q8" 
                       checked={formData.q8 === "3"}
                       onChange={e => setFormData({...formData, q8: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -574,7 +586,7 @@ function SurveyForm() {
                       name="q8" 
                       checked={formData.q8 === "4"}
                       onChange={e => setFormData({...formData, q8: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <input 
                       required
@@ -584,28 +596,82 @@ function SurveyForm() {
                       name="q8" 
                       checked={formData.q8 === "5"}
                       onChange={e => setFormData({...formData, q8: e.target.value})}
-                      className="mx-2 px-2 inline bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-blue-600 p-2.5" 
+                      className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
                       />
                       <label htmlFor="q8-5" className="px-2"><strong>Definitely</strong></label>
                     </fieldset>
                   </div>
-                </div>
-              </div>   
+                </div>                
+              </div>  
+              <div className="pt-2">
+                <label htmlFor="q9 text-center"><strong>Question 9: I would use such a political discourse exploration tool again.</strong></label>
+                <fieldset className="flex justify-center py-2">
+                  <label htmlFor="q9-1" className="px-2"><strong>Not at all</strong></label>
+                  <input 
+                  required
+                  value="1"
+                  id="q9-1" 
+                  type="radio" 
+                  name="q9" 
+                  checked={formData.q9 === "1"}
+                  onChange={e => setFormData({...formData, q9: e.target.value})}
+                  className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
+                  />
+                  <input 
+                  required
+                  value="2"
+                  id="q9-2" 
+                  type="radio" 
+                  name="q9" 
+                  checked={formData.q9 === "2"}
+                  onChange={e => setFormData({...formData, q9: e.target.value})}
+                  className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
+                  />
+                  <input 
+                  required
+                  value="3"
+                  id="q9-3" 
+                  type="radio" 
+                  name="q9" 
+                  checked={formData.q9 === "3"}
+                  onChange={e => setFormData({...formData, q9: e.target.value})}
+                  className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
+                  />
+                  <input 
+                  required
+                  value="4"
+                  id="q9-4" 
+                  type="radio" 
+                  name="q9" 
+                  checked={formData.q9 === "4"}
+                  onChange={e => setFormData({...formData, q9: e.target.value})}
+                  className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
+                  />
+                  <input 
+                  required
+                  value="5"
+                  id="q9-5" 
+                  type="radio" 
+                  name="q9" 
+                  checked={formData.q9 === "5"}
+                  onChange={e => setFormData({...formData, q9: e.target.value})}
+                  className="mx-2 px-2 inline bg-gray-50 border border-gray-600 text-gray-900 text-sm rounded-full focus:ring-blue-600 focus:border-blue-600 hover:cursor-pointer p-2.5" 
+                  />
+                <label htmlFor="q8-5" className="px-2"><strong>Definitely</strong></label>
+                </fieldset>
+              </div> 
             </div>   
             <div className={step !== 6 ? "hidden" : ""}>
               <h2 className="text-center">Submit your answers</h2>
               <p className="text-center pt-4">Thank you for your participation in the IANUS case studies.</p>
-              <p className="text-center py-2">Before you submit your answers, we’d like you to answer some relevant questions.</p>
-              <div className="py-2 text-center mt-10">
-                <a href="" target="_blank" className="mx-2"><span className="btn rounded-full my-2 md:my-0 w-full md:w-fit bg-amber-700 text-white hover:bg-amber-800">Post-study Surveys</span></a>
-              </div>
+              <p className="text-center py-2">Please submit your answers!</p>
             </div>
           </div>
           <div className={`text-center text-red-300 ${errorVal === "" ? "" : "pt-5"}`}>{errorVal}</div>
-        <div className={`mt-12 flex ${step === 0 ? "justify-end" : "justify-between"}`}>
+        <div className={`mt-12 flex ${step === 0 || step === 2 ? "justify-end" : "justify-between"}`}>
           {/* previous step button */}
-        <button type="button" onClick={handlePrev} className={`btn btn-primary ${step === 0 ? "hidden" : ""}`}>
-          {step > 0 && 
+        <button type="button" onClick={handlePrev} className={`btn btn-primary ${step === 0 || step === 2 ? "hidden" : ""}`}>
+          {(step !== 0 && step !== 2) && 
           <div>
             <svg className="inline pe-2 align-middle" xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 448 384">
               <path d="M 9 169 Q 0 179 0 192 L 0 192 Q 0 205 9 215 L 169 375 Q 179 384 192 384 Q 205 384 215 375 Q 224 365 224 352 Q 224 339 215 329 L 109 224 L 416 224 Q 430 224 439 215 Q 448 206 448 192 Q 448 178 439 169 Q 430 160 416 160 L 109 160 L 215 55 Q 224 45 224 32 Q 224 19 215 9 Q 205 0 192 0 Q 179 0 169 9 L 9 169 L 9 169 Z" />

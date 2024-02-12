@@ -1,0 +1,45 @@
+---
+import PageHeader from "@components/PageHeader.astro";
+import Shape from "@components/Shape.astro";
+import Base from "@layouts/Base.astro";
+  const page_data = {
+"title":"Event Logistics",
+"page_title":"Event Logistics"
+};
+---
+
+<Base
+  title="About"
+  meta_title="IANUS Case Studies - Event Logistics"
+  description="IANUS Case Studies - Event Logistics"
+  image=""
+>
+  <Shape />
+  <section class="page-hero py-16">
+    <div class="container">
+      <div class="page-hero-content mx-auto max-w-[768px] text-center">
+        <PageHeader page_data={page_data} />
+      </div>
+      <div>
+        <p>In this era of rapid technological advancements, AI is systematically used for various purposes, shaping the way we live, work, and interact. Furthermore, the emergence of generative AI has opened new possibilities by enabling machines to not only analyse data but also generate creative content, sparking innovation in fields such as art, design, and problem-solving.</p>
+        <p>Within this context, we aim to examine the public’s attitudes towards AI; a bigger focus is placed on generative AI, exploring whether people trust and value its analyses, outputs, and its overall function. </p>
+        <p>People attending the event will be informed on the project, its topic, and the relevant survey. Then, they will participate in a series of short, online tasks that display generative AI outputs, and will answer a few online questionnaires. These questionnaires include questions about the tasks, questions about demographics and overall attitudes towards AI.</p>
+        <p>The public’s opinions are invaluable in exploring attitudes and trust towards AI, and most importantly in exploring which factors shape these attitudes.</p>
+      </div>
+      <div>
+        <h4 class="text-primary py-5">Organisation:</h4>
+        <p>The event is co-organised by Datalab and the Citizen Science Hub of Aristotle University of Thessaloniki.</p>
+        <h4 class="text-primary py-5">Date:</h4>
+        <p>6 March 2024</p>
+        <h4 class="text-primary py-5">Time:</h4>
+        <p>5:30 – 8:30 pm</p>
+        <h4 class="text-primary py-5">Venue:</h4>
+        <p>Aristotle University of Thessaloniki, Informatics Department, Eth. Antistaseos 16, Kalamaria 551 33</p>
+        <h4 class="text-primary py-5">Registration Form:</h4>
+        <p><a href="https://survey.auth.gr/index.php/368441?lang=en" target="_blank" class="text-primary hover:underline">https://survey.auth.gr/index.php/368441?lang=en</a></p>
+        <h4 class="text-primary py-5">Contact</h4>
+        <p><a href="mailto:mmichals@csd.auth.gr" class="text-primary hover:underline">mmichals@csd.auth.gr</a>, <a href="mailto:eparascho@csd.auth.gr" class="text-primary hover:underline">eparascho@csd.auth.gr</a></p>
+      </div>
+    </div>
+  </section>
+</Base>

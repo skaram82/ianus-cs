@@ -9,6 +9,10 @@
       "url": "/about"
     },
     {
+      "name": "Event Logistics",
+      "url": "/event-logistics"
+    },
+    {
       "name": "Survey",
       "url": "/survey"
     }
@@ -18,6 +22,10 @@
     {
       "name": "About",
       "url": "/about"
+    },
+    {
+      "name": "Event Logistics",
+      "url": "/event-logistics"
     },
     {
       "name": "Survey",

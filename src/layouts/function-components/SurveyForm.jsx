@@ -18,7 +18,7 @@ function SurveyForm() {
   });
   const [errorVal, setErrorVal] = useState("");
   // define chart refs for embedding charts from observable
-  const chart_treemapRef = useRef();
+  const zoomable_treemapRef = useRef();
   const stepChart1Ref = useRef();
   const stepChart2Ref = useRef();
   const stepChart3Ref = useRef();
@@ -99,7 +99,7 @@ function SurveyForm() {
   useEffect(() => {
     const runtime = new Runtime();
     runtime.module(notebook, name => {
-      if (name === "chart_treemap") return new Inspector(chart_treemapRef.current);
+      if (name === "zoomable_treemap") return new Inspector(zoomable_treemapRef.current);
       if (name === "StepChart1") return new Inspector(stepChart1Ref.current);
       if (name === "StepChart2") return new Inspector(stepChart2Ref.current);
       if (name === "StepChart3") return new Inspector(stepChart3Ref.current);
@@ -196,7 +196,7 @@ function SurveyForm() {
             <div className={step !== 1 ? "hidden" : ""}>
               <h2 className="text-center">Task 1</h2>
               <p className="text-left py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ea labore, ullam eius facilis at fugit. Officiis molestiae impedit voluptas similique ad quidem, quas hic praesentium illum excepturi, eveniet, eum assumenda laboriosam nam. Quis, animi. Repellendus ab corrupti beatae aliquam, veritatis exercitationem natus aut dolore tempora consequuntur dignissimos nam laboriosam.</p>
-              <div className="py-4" ref={chart_treemapRef} />
+              <div className="py-4" ref={zoomable_treemapRef} />
               <hr className="mt-5" />
               <p className="text-center pt-5">Do you find the above analysis sufficient or would like to read the speech yourself?</p>
               <div className="py-2 text-center mt-10">

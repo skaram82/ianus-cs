@@ -1,15 +1,40 @@
 ---
+import PageHeader from "@components/PageHeader.astro";
+import Shape from "@components/Shape.astro";
+import AccordionAbout from "@layouts/function-components/AccordionAbout.jsx"
 import Base from "@layouts/Base.astro";
+  const page_data = {
+"title":"About",
+"page_title":"AI and Us: Exploring public trust in AI"
+};
 ---
 
-<Base title="">
-  <section class="section">
+<Base
+  title="About"
+  meta_title="IANUS Case Studies - About"
+  description="IANUS Case Studies - About"
+  image=""
+>
+  <Shape />
+  <section class="page-hero py-16">
     <div class="container">
-      <div class="flex h-[40vh] items-center justify-center">
-        <div class="text-center">
-        <h1>About</h1>
-        </div>
+      <div class="page-hero-content mx-auto max-w-[768px] text-center">
+        <PageHeader page_data={page_data} />
       </div>
+      <div>
+        <p>The IANUS consortium runs various case studies and events that aim to explore public trust in science and various scientific fields. As a consortium partner, the team of the Aristotle University of Thessaloniki (Data and Web Science Lab–Datalab) will explore public attitudes and trust in Artificial Intelligence (AI), focusing on Generative AI. The relevant event is co-organised by <a href="https://datalab.csd.auth.gr/" target="_blank" class="text-primary hover:underline">Datalab</a> and the <a href="https://cshub.auth.gr/en/" target="_blank" class="text-primary hover:underline">Citizen Science Hub of Aristotle University of Thessaloniki</a>.</p>
+        <h4 class="text-primary py-5">Study Title</h4>
+        <p>???????</p>
+        <h4 class="text-primary py-5">Principal Investigator</h4>
+        <p>Prof. Athena Vakali, School of Informatics, Aristotle University of Thessaloniki</p>
+        <h4 class="text-primary py-5">Funding Organization</h4>
+        <p>HORIZON Research and Innovation Actions – Grant Agreement “INspiring and ANchoring TrUst in Science” - IANUS 101058158</p>
+        <h4 class="text-primary py-5">Data Controller</h4>
+        <p>Aristotle University of Thessaloniki (AUTh)</p>
+        <h4 class="text-primary py-5">Data Protection Officer (DPO)</h4>
+        <p><a href="mailto:data.ptotection@auth.gr">data.ptotection@auth.gr</a></p>
+      </div>
+      <AccordionAbout client:load />
     </div>
   </section>
 </Base>

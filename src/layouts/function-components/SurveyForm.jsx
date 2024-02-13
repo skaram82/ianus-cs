@@ -494,12 +494,7 @@ function SurveyForm() {
                     </div>
                   </Dialog.Content>
                 </Dialog.Portal>
-              </Dialog.Root>
-              
-              
-              <div className="py-2 text-center mt-10">
-                <a href="" target="_blank" className="mx-2"><span className="btn rounded-full my-2 md:my-0 w-full md:w-fit bg-amber-700 text-white hover:bg-amber-800">Read the speech</span></a>
-              </div>              
+              </Dialog.Root>          
             </div>  
             <div className={step !== 2 ? "hidden" : ""}>
               <h2>Task 1: Questions</h2>

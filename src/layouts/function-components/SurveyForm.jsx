@@ -213,6 +213,12 @@ function SurveyForm() {
                and the model provided by the tool, the key question you need to answer is …</p>
               <p className="text-left py-2"><strong><em>How much do you trust ChatGPT to analyze political discourse?</em></strong></p>
               <div className="px-5 py-2 my-2 bg-orange-50">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" viewBox="0 0 512 512" className="text-dark inline pe-2">
+                  <path
+                    d="M 464 256 Q 464 199 436 152 L 436 152 Q 409 105 360 76 Q 311 48 256 48 Q 201 48 152 76 Q 103 105 76 152 Q 48 199 48 256 Q 48 313 76 360 Q 103 407 152 436 Q 201 464 256 464 Q 311 464 360 436 Q 409 407 436 360 Q 464 313 464 256 L 464 256 Z M 0 256 Q 1 186 34 128 L 34 128 Q 68 70 128 34 Q 189 0 256 0 Q 323 0 384 34 Q 444 70 478 128 Q 511 186 512 256 Q 511 326 478 384 Q 444 442 384 478 Q 323 512 256 512 Q 189 512 128 478 Q 68 442 34 384 Q 1 326 0 256 L 0 256 Z M 170 165 Q 176 148 190 138 L 190 138 Q 204 128 223 128 L 281 128 Q 308 129 326 147 Q 343 164 344 191 Q 343 227 312 246 L 280 264 Q 278 286 256 288 Q 234 286 232 264 L 232 251 Q 232 237 244 230 L 288 204 Q 296 200 296 191 Q 295 177 281 176 L 223 176 Q 217 176 215 181 L 215 183 Q 205 203 184 197 Q 164 188 170 167 L 170 165 L 170 165 Z M 224 352 Q 224 338 233 329 L 233 329 Q 242 320 256 320 Q 270 320 279 329 Q 288 338 288 352 Q 288 366 279 375 Q 270 384 256 384 Q 242 384 233 375 Q 224 366 224 352 L 224 352 Z"
+                  />
+                </svg>
+                <h3 className="inline text-lg">How to read this plot</h3>
                 <p className="text-left py-2">What percentage of each speech is devoted to presenting each party's 
                  programmatic agenda, and what is the extent of the opponents' criticism?</p>
                 <p className="text-left py-2">You may click on the word “Agenda” to see the topics each party leader chooses to 
@@ -593,6 +599,12 @@ function SurveyForm() {
               <p className="text-left py-2">In this task, two plots related to two different stages of the 
                implementation process are provided, and you are asked to evaluate both.</p>
               <div className="px-5 py-2 my-2 bg-orange-50">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" viewBox="0 0 512 512" className="text-dark inline pe-2">
+                  <path
+                    d="M 464 256 Q 464 199 436 152 L 436 152 Q 409 105 360 76 Q 311 48 256 48 Q 201 48 152 76 Q 103 105 76 152 Q 48 199 48 256 Q 48 313 76 360 Q 103 407 152 436 Q 201 464 256 464 Q 311 464 360 436 Q 409 407 436 360 Q 464 313 464 256 L 464 256 Z M 0 256 Q 1 186 34 128 L 34 128 Q 68 70 128 34 Q 189 0 256 0 Q 323 0 384 34 Q 444 70 478 128 Q 511 186 512 256 Q 511 326 478 384 Q 444 442 384 478 Q 323 512 256 512 Q 189 512 128 478 Q 68 442 34 384 Q 1 326 0 256 L 0 256 Z M 170 165 Q 176 148 190 138 L 190 138 Q 204 128 223 128 L 281 128 Q 308 129 326 147 Q 343 164 344 191 Q 343 227 312 246 L 280 264 Q 278 286 256 288 Q 234 286 232 264 L 232 251 Q 232 237 244 230 L 288 204 Q 296 200 296 191 Q 295 177 281 176 L 223 176 Q 217 176 215 181 L 215 183 Q 205 203 184 197 Q 164 188 170 167 L 170 165 L 170 165 Z M 224 352 Q 224 338 233 329 L 233 329 Q 242 320 256 320 Q 270 320 279 329 Q 288 338 288 352 Q 288 366 279 375 Q 270 384 256 384 Q 242 384 233 375 Q 224 366 224 352 L 224 352 Z"
+                  />
+                </svg>
+                <h3 className="inline text-lg">How to read this plot</h3>
                 <p className="text-left py-2">The step charts below depict the level of polarization (i.e., the 
                  intense division of society into opposing ideological camps, fostering exclusion of alternative 
                  views and emphasizing emotional and identity-driven narratives) during a political speech, with 
@@ -741,6 +753,12 @@ function SurveyForm() {
               <p className="text-left py-2">iMedD is a non-profit organization with a mission to support transparency
                and independence in journalism and promote meritocracy and excellence in the field.</p>
               <div className="px-5 py-2 my-2 bg-orange-50">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" viewBox="0 0 512 512" className="text-dark inline pe-2">
+                  <path
+                    d="M 464 256 Q 464 199 436 152 L 436 152 Q 409 105 360 76 Q 311 48 256 48 Q 201 48 152 76 Q 103 105 76 152 Q 48 199 48 256 Q 48 313 76 360 Q 103 407 152 436 Q 201 464 256 464 Q 311 464 360 436 Q 409 407 436 360 Q 464 313 464 256 L 464 256 Z M 0 256 Q 1 186 34 128 L 34 128 Q 68 70 128 34 Q 189 0 256 0 Q 323 0 384 34 Q 444 70 478 128 Q 511 186 512 256 Q 511 326 478 384 Q 444 442 384 478 Q 323 512 256 512 Q 189 512 128 478 Q 68 442 34 384 Q 1 326 0 256 L 0 256 Z M 170 165 Q 176 148 190 138 L 190 138 Q 204 128 223 128 L 281 128 Q 308 129 326 147 Q 343 164 344 191 Q 343 227 312 246 L 280 264 Q 278 286 256 288 Q 234 286 232 264 L 232 251 Q 232 237 244 230 L 288 204 Q 296 200 296 191 Q 295 177 281 176 L 223 176 Q 217 176 215 181 L 215 183 Q 205 203 184 197 Q 164 188 170 167 L 170 165 L 170 165 Z M 224 352 Q 224 338 233 329 L 233 329 Q 242 320 256 320 Q 270 320 279 329 Q 288 338 288 352 Q 288 366 279 375 Q 270 384 256 384 Q 242 384 233 375 Q 224 366 224 352 L 224 352 Z"
+                  />
+                </svg>
+                <h3 className="inline text-lg">How to read this plot</h3>
                 <p className="text-left py-2">The step chart below depicts the level of polarization during a political
                  speech, similar to the previous task.</p>
               </div>
@@ -811,6 +829,12 @@ function SurveyForm() {
               <p className="text-left py-2">In this task, you are asked to evaluate the detectable sentiment in the 
                political speeches of Kyriakos Mitsotakis and Alexis Tsipras. </p>
               <div className="px-5 py-2 my-2 bg-orange-50">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" viewBox="0 0 512 512" className="text-dark inline pe-2">
+                  <path
+                    d="M 464 256 Q 464 199 436 152 L 436 152 Q 409 105 360 76 Q 311 48 256 48 Q 201 48 152 76 Q 103 105 76 152 Q 48 199 48 256 Q 48 313 76 360 Q 103 407 152 436 Q 201 464 256 464 Q 311 464 360 436 Q 409 407 436 360 Q 464 313 464 256 L 464 256 Z M 0 256 Q 1 186 34 128 L 34 128 Q 68 70 128 34 Q 189 0 256 0 Q 323 0 384 34 Q 444 70 478 128 Q 511 186 512 256 Q 511 326 478 384 Q 444 442 384 478 Q 323 512 256 512 Q 189 512 128 478 Q 68 442 34 384 Q 1 326 0 256 L 0 256 Z M 170 165 Q 176 148 190 138 L 190 138 Q 204 128 223 128 L 281 128 Q 308 129 326 147 Q 343 164 344 191 Q 343 227 312 246 L 280 264 Q 278 286 256 288 Q 234 286 232 264 L 232 251 Q 232 237 244 230 L 288 204 Q 296 200 296 191 Q 295 177 281 176 L 223 176 Q 217 176 215 181 L 215 183 Q 205 203 184 197 Q 164 188 170 167 L 170 165 L 170 165 Z M 224 352 Q 224 338 233 329 L 233 329 Q 242 320 256 320 Q 270 320 279 329 Q 288 338 288 352 Q 288 366 279 375 Q 270 384 256 384 Q 242 384 233 375 Q 224 366 224 352 L 224 352 Z"
+                  />
+                </svg>
+                <h3 className="inline text-lg">How to read this plot</h3>
                 <p className="text-left py-2">The following charts present the dominant sentiment expressed on average
                  in a certain political speech (as identified via sentiment analysis using ChatGPT), categorized as 
                  positive, neutral, or negative.</p>

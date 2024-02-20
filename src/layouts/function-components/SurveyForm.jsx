@@ -175,7 +175,20 @@ function SurveyForm() {
           {/* Step 1 Form */}
             <div className={step !== 0 ? "hidden" : ""}>
               <h2 className="text-center">Welcome to the IANUS Case Studies</h2>
-              <p className="text-center py-2">Before we start we'd like you to fill in your given user ID and answer the following questionnaires.</p>
+              <h3 className="text-center pt-4">General event introduction</h3>
+              <p className="text-left py-2">In this event, the team of the Aristotle University of Thessaloniki
+               (Data and Web Science Lab–Datalab) will explore <strong>public attitudes and trust</strong> in 
+               Artificial Intelligence (AI), focusing on <strong>Generative AI</strong>, such as ChatGPT.</p>
+               <p className="text-left py-2">What follows is a series of visualizations of <strong>political 
+                discourse</strong> during <strong>Greece's latest pre-election period</strong>. The goal is to analyze
+                the pre-election campaign speeches of Greece’s main political leaders: what issues they raise in the
+                public discourse, what sentiments they convey, and to what extent polarization and populism can be 
+                detected in their rhetoric.</p>
+                <p className="text-left py-2">To perform the analysis, we used the <strong>ChatGPT API</strong> and 
+                engaged in a programmatic chat with the interactive AI model. Specifically, we prompted ChatGPT to 
+                provide us with various linguistic features for each paragraph of the campaign speeches, the results 
+                of which we present in the following visualizations.</p>
+              <p className="text-left pt-4 py-2">Before we start we'd like you to fill in your given user ID and answer the following questionnaires.</p>
               <div className="pt-4">
                 <label htmlFor="name"><strong>User ID</strong></label>
                 <input 
@@ -196,7 +209,15 @@ function SurveyForm() {
             {/* Step 2 Form */}         
             <div className={step !== 1 ? "hidden" : ""}>
               <h2 className="text-center">Task 1</h2>
-              <p className="text-left py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ea labore, ullam eius facilis at fugit. Officiis molestiae impedit voluptas similique ad quidem, quas hic praesentium illum excepturi, eveniet, eum assumenda laboriosam nam. Quis, animi. Repellendus ab corrupti beatae aliquam, veritatis exercitationem natus aut dolore tempora consequuntur dignissimos nam laboriosam.</p>
+              <p className="text-left py-2">Considering the main objective of this study, along with the information
+               and the model provided by the tool, the key question you need to answer is …</p>
+              <p className="text-left py-2"><strong><em>How much do you trust ChatGPT to analyze political discourse?</em></strong></p>
+              <div className="px-5 py-2 my-2 bg-orange-50">
+                <p className="text-left py-2">What percentage of each speech is devoted to presenting each party's 
+                 programmatic agenda, and what is the extent of the opponents' criticism?</p>
+                <p className="text-left py-2">You may click on the word “Agenda” to see the topics each party leader chooses to 
+                 discuss. By selecting the word “Criticism”, you’ll navigate the topics they criticize their opponents about.</p>
+              </div> 
               <div className="py-4" ref={zoomable_treemapRef} />
               <hr className="mt-5" />
               <p className="text-center pt-5">Do you find the above analysis sufficient or would like to read the speech yourself?</p>
@@ -569,13 +590,23 @@ function SurveyForm() {
             {/* Step 3 Form */}    
             <div className={step !== 3 ? "hidden" : ""}>
               <h2 className="text-center">Task 2 - Questions</h2>
-              <p className="text-left pt-4">The step charts below depict the evolution of the level of polarization or populism during a political speech, with the number of paragraphs shown on the horizontal axis. Each paragraph, depending on the value of the polarization and populism indicators it has received, is placed in a category:</p>
-              <ul className="text-left py-2 list-disc">
-                <li>no or low level (polarization or populism respectively) if it has a value from 0 to 0.5,</li>
-                <li>medium level if it has a value from 0.51 to 0.8,</li>
-                <li>high level if it has a value from 0.81 to 1.</li>
-              </ul>
-              <p className="text-left py-2">If you wish, hover over the chart to read the corresponding paragraph.</p>
+              <p className="text-left py-2">In this task, two plots related to two different stages of the 
+               implementation process are provided, and you are asked to evaluate both.</p>
+              <div className="px-5 py-2 my-2 bg-orange-50">
+                <p className="text-left py-2">The step charts below depict the level of polarization (i.e., the 
+                 intense division of society into opposing ideological camps, fostering exclusion of alternative 
+                 views and emphasizing emotional and identity-driven narratives) during a political speech, with 
+                 the number of paragraphs shown on the horizontal axis. Each paragraph, depending on the value of 
+                 the polarization indicators it has received, is placed in a category:</p>
+                <p className="text-left py-2 ps-2">
+                  <ul className="text-left py-2 list-disc">
+                    <li>no or low level if it has a value from 0 to 0.5,</li>
+                    <li>medium level if it has a value from 0.51 to 0.8,</li>
+                    <li>high level if it has a value from 0.81 to 1.</li>
+                  </ul>
+                </p>
+                <p className="text-left py-2">If you wish, hover over the chart to read the corresponding paragraph.</p>
+              </div>
               <div className="grid gap-5 grid-cols-2">
                 <div className="col-span-2">
                   <h3 className="text-left py-2 text-lg">First step of the Analysis</h3>
@@ -704,7 +735,15 @@ function SurveyForm() {
             {/* Step 4 Form */}    
             <div className={step !== 4 ? "hidden" : ""}>
               <h2 className="text-center">Task 3 - Questions</h2>
-              <p className="text-left pt-4">The step chart below (same as the second one in previous step) is produced in a <strong>collaboration between ChatGPT [link] and Data Journalists from the Incubator for Media Education and Development (iMedD) [link]</strong>, a non-profit organization with a mission to support the transparency and independence in journalism and promoting meritocracy and excellence in the field. iMedD was founded in 2018 with the exclusive donation of the Stavros Niarchos Foundation (SNF).  </p>
+              <p className="text-left py-2">The results visualized in this plot are initially produced by the ChatGPT,
+               but they are further analyzed and validated by data journalists from the Incubator for Media Education
+              and Development (iMedD).</p>
+              <p className="text-left py-2">iMedD is a non-profit organization with a mission to support transparency
+               and independence in journalism and promote meritocracy and excellence in the field.</p>
+              <div className="px-5 py-2 my-2 bg-orange-50">
+                <p className="text-left py-2">The step chart below depicts the level of polarization during a political
+                 speech, similar to the previous task.</p>
+              </div>
               <div className="pt-4">
                 <div ref={stepChart3Ref} />
                 <div className="pt-4">
@@ -769,7 +808,15 @@ function SurveyForm() {
             {/* Step 5 Form */}    
             <div className={step !== 5 ? "hidden" : ""}>
               <h2 className="text-center">Task 4 - Questions</h2>
-              <p className="text-left pt-4">The following analysis refers to the sentiment detectable in the political speeches themselves and is not at all related to audience emotions.</p>
+              <p className="text-left py-2">In this task, you are asked to evaluate the detectable sentiment in the 
+               political speeches of Kyriakos Mitsotakis and Alexis Tsipras. </p>
+              <div className="px-5 py-2 my-2 bg-orange-50">
+                <p className="text-left py-2">The following charts present the dominant sentiment expressed on average
+                 in a certain political speech (as identified via sentiment analysis using ChatGPT), categorized as 
+                 positive, neutral, or negative.</p>
+                <p className="text-left py-2">Note: The analysis refers to the sentiment detectable in the political 
+                 speeches themselves and is completely unrelated to audience emotions.</p>
+              </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="col-span-2 md:col-span-1 py-2">
                   <h5 className="text-center">Kyriakos Mitsotakis</h5>
@@ -777,7 +824,7 @@ function SurveyForm() {
                   <div ref={legendSentimentRef} />
                   <div className="pt-4">
                     <label htmlFor="q7 text-center"><strong>Question 7: I believe the results produced by ChatGPT and validated by data journalists  given in this chart are accurate.</strong></label>
-                    <fieldset className="flex justify-center py-2">
+                    <fieldset className="flex justify-center py-2 mt-4">
                       <label htmlFor="q7-1" className="px-2"><strong>Not at all</strong></label>
                       <input 
                       required
@@ -833,13 +880,13 @@ function SurveyForm() {
                     </fieldset>
                   </div>
                 </div>
-                <div className="col-span-2 md:col-span-1 py-2">
+                <div className="col-span-2 md:col-span-1 py-2">                  
+                  <h5 className="text-center">Alexis Tsipras</h5>
+                  <div ref={speedChart_tsiprasRef} />
+                  <div ref={legendSentiment2Ref} />
                   <div className="pt-4">
-                    <h5 className="text-center">Alexis Tsipras</h5>
-                    <div ref={speedChart_tsiprasRef} />
-                    <div ref={legendSentiment2Ref} />
                     <label htmlFor="q8 text-center"><strong>Question 8: I believe the results produced by ChatGPT and validated by data journalists  given in this chart are accurate.</strong></label>
-                    <fieldset className="flex justify-center py-2 mt-6">
+                    <fieldset className="flex justify-center py-2 mt-4">
                       <label htmlFor="q8-1" className="px-2"><strong>Not at all</strong></label>
                       <input 
                       required
@@ -898,7 +945,7 @@ function SurveyForm() {
               </div>  
               <div className="pt-2">
                 <label htmlFor="q9 text-center"><strong>Question 9: I would use such a political discourse exploration tool again.</strong></label>
-                <fieldset className="flex justify-center py-2">
+                <fieldset className="flex justify-center py-2 mt-4">
                   <label htmlFor="q9-1" className="px-2"><strong>Not at all</strong></label>
                   <input 
                   required

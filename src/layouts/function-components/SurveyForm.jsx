@@ -202,8 +202,8 @@ function SurveyForm() {
                 />
               </div>
               <div className="py-2 text-center mt-10">
-                <a href="" target="_blank" className="mx-2"><span className="btn rounded-full my-2 md:my-0 w-full md:w-fit bg-amber-700 text-white hover:bg-amber-800">Consent Form</span></a>
-                <a href="" target="_blank" className="mx-2"><span className="btn rounded-full my-2 md:my-0 w-full md:w-fit bg-amber-700 text-white hover:bg-amber-800">Pre-study Surveys</span></a>
+                <a href="https://survey.auth.gr/index.php/893994?lang=el" target="_blank" className="mx-2"><span className="btn rounded-full my-2 md:my-0 w-full md:w-fit bg-amber-700 text-white hover:bg-amber-800">Consent Form</span></a>
+                <a href="https://survey.auth.gr/index.php/199836?lang=en" target="_blank" className="mx-2"><span className="btn rounded-full my-2 md:my-0 w-full md:w-fit bg-amber-700 text-white hover:bg-amber-800">Pre-study Surveys</span></a>
               </div>
             </div>
             {/* Step 2 Form */}         

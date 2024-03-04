@@ -113,7 +113,7 @@ function SurveyForm() {
   }, []);
 
   return (
-    <div className="w-full px-24 py-4">   
+    <div className="w-full px-2 lg:px-24 py-4">   
     <ol className="flex items-center w-full mb-4 sm:mb-5">
       <li className={`flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-4 after:inline-block text-blue-500 ${step === 0 ? "" : "after:border-blue-100"}`}>
         <div className={`flex items-center justify-center w-10 h-10 rounded-full lg:h-12 lg:w-12 shrink-0 bg-blue-100`}>

@@ -596,8 +596,8 @@ function SurveyForm() {
             {/* Step 3 Form */}    
             <div className={step !== 3 ? "hidden" : ""}>
               <h2 className="text-center">Task 2 - Questions</h2>
-              <p className="text-left py-2">In this task, two plots related to two different stages of the 
-               implementation process are provided, and you are asked to evaluate both.</p>
+              <p className="text-left py-2">In this task, two plots (visualizations) representing two different approaches of 
+              analysis are provided, and you are asked to evaluate both.</p>
               <div className="px-5 py-2 my-2 bg-orange-50">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" viewBox="0 0 512 512" className="text-dark inline pe-2">
                   <path
@@ -621,7 +621,7 @@ function SurveyForm() {
               </div>
               <div className="grid gap-5 grid-cols-2">
                 <div className="col-span-2">
-                  <h3 className="text-left py-2 text-lg">First step of the Analysis</h3>
+                  <h3 className="text-left py-2 text-lg">First approach of Analysis</h3>
                   <div ref={stepChart2Ref} />
                   <div className="pt-4">
                     <label htmlFor="q4 text-center"><strong>Question 4: I believe the results given in this chart are accurate</strong></label>
@@ -682,7 +682,7 @@ function SurveyForm() {
                   </div>
                 </div>
                 <div className="col-span-2">
-                <h3 className="text-left py-2 text-lg">Second step of the Analysis</h3>
+                <h3 className="text-left py-2 text-lg">Second approach of Analysis</h3>
                   <div ref={stepChart1Ref} />
                   <div className="pt-4">
                     <label htmlFor="q5 text-center"><strong>Question 5: I believe the results given in this chart are accurate</strong></label>

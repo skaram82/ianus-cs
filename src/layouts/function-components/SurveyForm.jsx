@@ -208,7 +208,7 @@ function SurveyForm() {
             </div>
             {/* Step 2 Form */}         
             <div className={step !== 1 ? "hidden" : ""}>
-              <h2 className="text-center">Task 1</h2>
+              <h2 className="text-center">I1 - Interaction 1</h2>
               <p className="text-left py-2">Considering the main objective of this study, along with the information
                and the model provided by the tool, the key question you need to answer is …</p>
               <p className="text-left py-2"><strong><em>How much do you trust ChatGPT to analyze political discourse?</em></strong></p>
@@ -524,7 +524,7 @@ function SurveyForm() {
               </Dialog.Root>          
             </div>  
             <div className={step !== 2 ? "hidden" : ""}>
-              <h2>Task 1: Questions</h2>
+              <h2>I1 - Interaction 1: Questions</h2>
               <div className="pt-4">
                 <div>
                   <label htmlFor="q1"><strong>Question 1: Did you press the button to read the speech?</strong></label>
@@ -595,7 +595,7 @@ function SurveyForm() {
             </div>
             {/* Step 3 Form */}    
             <div className={step !== 3 ? "hidden" : ""}>
-              <h2 className="text-center">Task 2 - Questions</h2>
+              <h2 className="text-center">I3 - Interaction 3 - Questions</h2>
               <p className="text-left py-2">In this task, two plots (visualizations) representing two different approaches of 
               analysis are provided, and you are asked to evaluate both.</p>
               <div className="px-5 py-2 my-2 bg-orange-50">
@@ -746,7 +746,7 @@ function SurveyForm() {
             </div>
             {/* Step 4 Form */}    
             <div className={step !== 4 ? "hidden" : ""}>
-              <h2 className="text-center">Task 3 - Questions</h2>
+              <h2 className="text-center">I3 - Interaction 3 - Questions</h2>
               <p className="text-left py-2">The results visualized in this plot are initially produced by the ChatGPT,
                but they are further analyzed and validated by data journalists from the Incubator for Media Education
               and Development (iMedD).</p>
@@ -825,7 +825,7 @@ function SurveyForm() {
             </div>
             {/* Step 5 Form */}    
             <div className={step !== 5 ? "hidden" : ""}>
-              <h2 className="text-center">Task 4 - Questions</h2>
+              <h2 className="text-center">I4 - Interaction 4 - Questions</h2>
               <p className="text-left py-2">In this task, you are asked to evaluate the detectable sentiment in the 
                political speeches of Kyriakos Mitsotakis and Alexis Tsipras. </p>
               <div className="px-5 py-2 my-2 bg-orange-50">

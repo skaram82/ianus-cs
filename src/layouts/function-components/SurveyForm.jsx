@@ -595,7 +595,7 @@ function SurveyForm() {
             </div>
             {/* Step 3 Form */}    
             <div className={step !== 3 ? "hidden" : ""}>
-              <h2 className="text-center">I3 - Interaction 3 - Questions</h2>
+              <h2 className="text-center">I2 - Interaction 2 - Questions</h2>
               <p className="text-left py-2">In this task, two plots (visualizations) representing two different approaches of 
               analysis are provided, and you are asked to evaluate both.</p>
               <div className="px-5 py-2 my-2 bg-orange-50">
